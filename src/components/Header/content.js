@@ -5,7 +5,7 @@ export const links = [
   },
   {
     label: "Serviços",
-    url: "/servicos"
+    url: "/"
   },
   {
     label: "Blog",
@@ -13,7 +13,7 @@ export const links = [
   },
   {
     label: "Eventos",
-    url: "/eventos"
+    url: "https://xperience.superlogica.com"
   }
 ];
 
