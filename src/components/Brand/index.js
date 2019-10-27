@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Logo from "../../images/Superlogica.svg";
+import Logo from "../../../public/Superlogica.svg";
 
 import * as S from "./styled";
 
