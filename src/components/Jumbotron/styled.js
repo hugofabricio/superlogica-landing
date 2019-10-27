@@ -3,7 +3,7 @@ import { rem, linearGradient } from "polished";
 import Container from "../Container";
 
 export const JumbotronWrapper = styled.section`
-  padding: ${rem("180px")} 0 ${rem("140px")};
+  padding: ${rem(140)} 0 ${rem(70)};
 
   ${props => {
     const { startColor, endColor, theme } = props;
@@ -23,23 +23,25 @@ export const JumbotronContainer = styled(Container)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  min-height: ${rem(462)};
 `;
 
 export const JumbotronHeader = styled.header`
-  max-width: ${rem("670px")};
+  max-width: ${rem(670)};
 `;
 
 export const JumbotronTitle = styled.h2`
   color: ${({ theme }) => theme.colors.light};
-  font-size: ${rem("56px")};
+  font-size: ${rem(56)};
   font-family: ${({ theme }) => theme.fontFamily.serif};
-  line-height: ${rem("72px")};
-  margin-bottom: ${rem("15px")};
+  line-height: ${rem(72)};
+  margin-bottom: ${rem(15)};
 `;
 
 export const JumbotronText = styled.p`
   color: ${({ theme }) => theme.colors.light};
-  font-size: ${rem("20px")};
-  max-width: ${rem("470px")};
-  margin-bottom: ${rem("25px")};
+  font-size: ${rem(20)};
+  max-width: ${rem(470)};
+  margin-bottom: ${rem(25)};
 `;

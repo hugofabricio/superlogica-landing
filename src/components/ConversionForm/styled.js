@@ -3,17 +3,20 @@ import { rem } from "polished";
 import Card from "../Card";
 
 export const ConversionFormWrapper = styled(Card)`
-  max-width: ${rem("360px")};
+  max-width: ${rem(360)};
+  position: absolute;
+  right: ${rem(30)};
+  overflow: hidden;
 `;
 
 export const ConversionFormHeader = styled.header`
   text-align: center;
-  margin-bottom: ${rem("30px")};
+  margin-bottom: ${rem(30)};
 `;
 
 export const ConversionFormTitle = styled.h2`
   font-weight: 500;
-  font-size: ${rem("20px")};
+  font-size: ${rem(20)};
 `;
 
 export const ConversionFormContent = styled.div``;

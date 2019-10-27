@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import Link from "../Link";
 
 export const NavList = styled.ul`
   display: flex;
@@ -22,7 +21,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   position: relative;
   color: ${({ theme }) => theme.colors.light};
 

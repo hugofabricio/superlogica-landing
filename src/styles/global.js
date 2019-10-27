@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { rem } from "polished";
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,500&display=swap');
@@ -39,11 +38,40 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  label {
+    display: inline-block;
+  }
+
   button,
   input,
   textarea,
   select {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     outline: none;
+  }
+
+  button,
+  input {
+    overflow: visible;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+
+  select {
+    word-wrap: normal;
   }
 
   sub,

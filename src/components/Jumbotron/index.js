@@ -18,7 +18,7 @@ const Jumbotron = ({
         {button && (
           <Button
             label={button.label}
-            type="light"
+            appearance="light"
             size="larger"
             url={button.url}
           />

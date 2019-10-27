@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem, rgba } from "polished";
 import Icon from "../Icon";
 
-const TYPES = {
+const APPEARANCES = {
   PRIMARY: "primary",
   PRIMARY_DARK: "primaryDark",
   PRIMARY_OUTLINE: "primaryOutline",
@@ -32,7 +32,7 @@ export const ButtonText = styled.span`
   display: inline-block;
 `;
 
-export const Button = styled.a`
+export const Button = styled.button`
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -53,7 +53,12 @@ export const Button = styled.a`
   cursor: pointer;
 
   /* Block */
-  ${props => props.block && `display: flex;`}
+  ${props =>
+    props.block &&
+    `
+      width: 100%;
+      display: flex;
+    `}
 
   /* Sizes */
   ${props => {
@@ -97,11 +102,11 @@ export const Button = styled.a`
     `;
   }}
 
-  /* Types */
+  /* Appearances */
   ${props => {
-    const { type, theme } = props;
+    const { appearance, theme } = props;
 
-    if (TYPES.PRIMARY === type) {
+    if (APPEARANCES.PRIMARY === appearance) {
       return `
         background: ${theme.colors.primary};
         border-color: ${theme.colors.primary};
@@ -131,7 +136,7 @@ export const Button = styled.a`
       `;
     }
 
-    if (TYPES.PRIMARY_DARK === type) {
+    if (APPEARANCES.PRIMARY_DARK === appearance) {
       return `
         background: ${theme.colors.primary};
         border-color: ${theme.colors.primary};
@@ -161,7 +166,7 @@ export const Button = styled.a`
       `;
     }
 
-    if (type === TYPES.PRIMARY_OUTLINE) {
+    if (APPEARANCES.PRIMARY_OUTLINE === appearance) {
       return `
         border-color: ${theme.colors.primary};
         color: ${theme.colors.primary};
@@ -189,7 +194,7 @@ export const Button = styled.a`
       `;
     }
 
-    if (type === TYPES.LIGHT) {
+    if (APPEARANCES.LIGHT === appearance) {
       return `
         background: ${theme.colors.light};
         border-color: ${theme.colors.light};
@@ -219,7 +224,7 @@ export const Button = styled.a`
       `;
     }
 
-    if (type === TYPES.LIGHT_OUTLINE) {
+    if (APPEARANCES.LIGHT_OUTLINE === appearance) {
       return `
         border-color: ${theme.colors.light};
         color: ${theme.colors.light};
@@ -248,3 +253,5 @@ export const Button = styled.a`
     }
   }}
 `;
+
+export const ButtonLink = Button.withComponent("a");
