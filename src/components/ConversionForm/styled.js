@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { rem } from "polished";
 import Card from "../Card";
 
-export const ConversionFormWrapper = styled(Card)`
+export const ConversionCard = styled(Card)`
   max-width: ${rem(360)};
   position: absolute;
   right: ${rem(30)};

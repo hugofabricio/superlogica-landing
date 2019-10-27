@@ -5,7 +5,7 @@ import Button from "../Button";
 import * as S from "./styled";
 
 const ConversionForm = () => (
-  <S.ConversionFormWrapper>
+  <S.ConversionCard>
     <S.ConversionFormHeader>
       <S.ConversionFormTitle>
         Preencha o formulário e receba um kit exclusivo
@@ -63,7 +63,7 @@ const ConversionForm = () => (
         </Form>
       </Formik>
     </S.ConversionFormContent>
-  </S.ConversionFormWrapper>
+  </S.ConversionCard>
 );
 
 export default ConversionForm;

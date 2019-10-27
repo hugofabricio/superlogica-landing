@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Link from "next/link";
+import { rem } from "polished";
+import Card from "../Card";
 
-export const BrandLink = styled(Link)``;
-
-export const BrandLogo = styled.div``;
+export const PlanCard = styled(Card)``;
