@@ -1,4 +1,3 @@
-import { useField } from "formik";
 import * as S from "./styled";
 
 const Feedback = ({ meta }) => (
