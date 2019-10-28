@@ -3,7 +3,7 @@ import { rem } from "polished";
 
 export const ContainerWrapper = styled.div`
   width: 100%;
-  max-width: ${rem("1200px")};
+  max-width: ${rem("1280px")};
   padding-right: ${rem("30px")};
   padding-left: ${rem("30px")};
   margin-right: auto;

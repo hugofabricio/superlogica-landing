@@ -3,7 +3,6 @@ import { rem, rgba } from "polished";
 
 export const CardWrapper = styled.div`
   padding: ${rem(40)};
-  overflow: hidden;
 
   ${props => {
     const { theme } = props;
@@ -12,7 +11,7 @@ export const CardWrapper = styled.div`
       background-color ${theme.colors.light};
       border-radius: ${rem(theme.radius.larger)};
       box-shadow: 0 ${rem(20)} ${rem(20)} ${rem(-15)} 
-      ${rgba(theme.colors.dark, 0.2)}
+      ${rgba(theme.colors.dark, 0.35)}
     `;
   }}
 `;

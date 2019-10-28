@@ -3,8 +3,9 @@ import { rem } from "polished";
 import Card from "../Card";
 
 export const ConversionCard = styled(Card)`
-  max-width: ${rem(360)};
+  max-width: ${rem(340)};
   position: absolute;
+  z-index: 2;
   right: ${rem(30)};
   overflow: hidden;
 `;

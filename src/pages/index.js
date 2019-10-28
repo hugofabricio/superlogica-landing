@@ -1,6 +1,7 @@
 import { NextSeo } from "next-seo";
 import MainLayout from "../layouts/main";
 import Jumbotron from "../components/Jumbotron";
+import Plans from "../components/Plans";
 
 const Index = () => (
   <>
@@ -16,6 +17,7 @@ const Index = () => (
         button={{ label: "Saiba mais", url: "/" }}
         withConversion={true}
       />
+      <Plans />
     </MainLayout>
   </>
 );
