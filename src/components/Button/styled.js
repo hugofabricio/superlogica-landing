@@ -207,8 +207,8 @@ export const Button = styled.button`
         }
 
         &:hover {
-          background: ${theme.colors.primaryLight};
-          border-color: ${theme.colors.primaryLight};
+          background: ${theme.colors.primaryDark};
+          border-color: ${theme.colors.primaryDark};
           color: ${theme.colors.light};
 
           ${ButtonIcon} {

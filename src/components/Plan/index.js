@@ -1,11 +1,9 @@
 import * as S from "./styled";
 
-import Button from "../Button";
-
 const Plan = ({ className, isBestSeller }) => (
   <S.PlanCard className={className} isBestSeller={isBestSeller}>
     <S.PlanHeader>
-      <S.PlanBadge>Melhor custo-benefício</S.PlanBadge>
+      {isBestSeller && <S.PlanBadge>Melhor custo-benefício</S.PlanBadge>}
       <S.PlanIcon name="cloud" />
       <S.PlanTitle>Plano A</S.PlanTitle>
       <S.PlanPrice data-text="+ Taxa de adesão">134</S.PlanPrice>
@@ -18,7 +16,11 @@ const Plan = ({ className, isBestSeller }) => (
       </S.PlanDetails>
     </S.PlanContent>
     <S.PlanFooter>
-      <Button label="Comprar" appearance="primaryDark" hasLeftIcon="cart" />
+      <S.PlanButton
+        label="Comprar"
+        appearance={!isBestSeller ? "primaryDark" : "light"}
+        hasLeftIcon="cart"
+      />
     </S.PlanFooter>
   </S.PlanCard>
 );

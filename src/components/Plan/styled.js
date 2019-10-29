@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { rem, rgba } from "polished";
 import Card from "../Card";
 import Icon from "../Icon";
+import Button from "../Button";
 
 export const PlanCard = styled(Card)`
   padding: 0;
@@ -10,12 +11,28 @@ export const PlanCard = styled(Card)`
   text-align: center;
   border: ${rem(2)} solid ${({ theme }) => theme.colors.grey};
 
-  ${props =>
-    props.isBestSeller &&
-    `
-      color: ${({ theme }) => theme.colors.light};
-      background-color: ${({ theme }) => theme.colors.primary};
-    `}
+  ${props => {
+    const { isBestSeller, theme } = props;
+
+    if (isBestSeller) {
+      return `
+        color: ${theme.colors.light};
+        background-color: ${theme.colors.primary};
+        border-color: ${theme.colors.primary};
+        border: none;
+
+        ${PlanIcon} {
+          path {
+            fill: ${theme.colors.light};
+          }
+        }
+
+        ${PlanTitle} {
+          color: ${theme.colors.light};
+        }
+      `;
+    }
+  }}
 `;
 
 export const PlanBadge = styled.span`
@@ -23,15 +40,17 @@ export const PlanBadge = styled.span`
   position: absolute;
   padding: ${rem(10)};
   width: 100%;
-  height: ${rem(40)};
-  top: ${rem(-40)};
+  height: ${rem(46)};
+  top: ${rem(-36)};
   display: block;
   left: 0;
   z-index: -1;
 
-  font-size: ${rem(14)};
+  font-size: ${rem(12)};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.light};
+  border-top-left-radius: ${({ theme }) => rem(theme.radius.larger)};
+  border-top-right-radius: ${({ theme }) => rem(theme.radius.larger)};
   text-transform: uppercase;
 `;
 
@@ -91,3 +110,5 @@ export const PlanFeature = styled.li`
 export const PlanFooter = styled.footer`
   padding: ${rem(30)} ${rem(40)} ${rem(40)};
 `;
+
+export const PlanButton = styled(Button)``;

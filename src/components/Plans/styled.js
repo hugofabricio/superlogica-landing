@@ -3,7 +3,7 @@ import { rem, linearGradient } from "polished";
 import Container from "../Container";
 
 export const PlansWrapper = styled.section`
-  padding-bottom: ${rem(200)};
+  padding-bottom: ${rem(140)};
 
   ${props => {
     const { theme } = props;

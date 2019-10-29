@@ -3,7 +3,7 @@ import { rem, linearGradient } from "polished";
 import Container from "../Container";
 
 export const JumbotronWrapper = styled.section`
-  padding: ${rem(140)} 0 ${rem(100)};
+  padding: ${rem(140)} 0 ${rem(120)};
 
   ${props => {
     const { startColor, endColor, theme } = props;
