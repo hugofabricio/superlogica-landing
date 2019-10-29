@@ -1,3 +1,4 @@
+import Group from "./Group";
 import Input from "./Input";
 
-export { Input };
+export { Group, Input };

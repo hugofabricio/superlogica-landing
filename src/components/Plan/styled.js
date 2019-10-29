@@ -7,7 +7,7 @@ import Button from "../Button";
 export const PlanCard = styled(Card)`
   padding: 0;
   position: relative;
-  width: ${rem(340)};
+  width: 30%;
   text-align: center;
   border: ${rem(2)} solid ${({ theme }) => theme.colors.grey};
 
@@ -33,6 +33,14 @@ export const PlanCard = styled(Card)`
       `;
     }
   }}
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 export const PlanBadge = styled.span`

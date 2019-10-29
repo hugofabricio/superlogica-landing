@@ -10,7 +10,7 @@ const Jumbotron = ({
   startColor,
   endColor
 }) => (
-  <S.JumbotronWrapper startColor={startColor} endColor={endColor}>
+  <S.JumbotronWrapper id="intro" startColor={startColor} endColor={endColor}>
     <S.JumbotronContainer>
       <S.JumbotronHeader>
         <S.JumbotronTitle>{title}</S.JumbotronTitle>

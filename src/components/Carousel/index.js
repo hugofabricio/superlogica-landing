@@ -1,9 +1,34 @@
+import SlickCarousel from "react-slick";
 import * as S from "./styled";
 
-const Brand = () => (
-  <S.BrandLink>
-    <S.BrandLogo>Superlógica</S.BrandLogo>
-  </S.BrandLink>
-);
+function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <S.NavButtonPrev onClick={onClick}>
+      <S.NavIcon name="arrowLeft" />
+    </S.NavButtonPrev>
+  );
+}
 
-export default Brand;
+function NextArrow(props) {
+  const { onClick } = props;
+  return (
+    <S.NavButtonNext onClick={onClick}>
+      <S.NavIcon name="arrowRight" />
+    </S.NavButtonNext>
+  );
+}
+
+const Carousel = ({ children }) => {
+  let settings = {
+    fade: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
+  };
+  return <SlickCarousel {...settings}>{children}</SlickCarousel>;
+};
+
+export default Carousel;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { rem, linearGradient } from "polished";
+import media from "styled-media-query";
+import { rem, between, linearGradient } from "polished";
 import Container from "../Container";
 
 export const JumbotronWrapper = styled.section`
@@ -24,18 +25,35 @@ export const JumbotronContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  min-height: ${rem(462)};
+  min-height: ${rem(460)};
+
+  ${media.greaterThan("962px")`
+
+  `}
+
+  ${media.lessThan("962px")`
+    flex-direction: column;
+  `}
 `;
 
 export const JumbotronHeader = styled.header`
-  max-width: ${rem(670)};
+  max-width: ${rem(630)};
+
+  ${media.lessThan("962px")`
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: ${rem(40)};
+  `}
 `;
 
 export const JumbotronTitle = styled.h2`
   color: ${({ theme }) => theme.colors.light};
-  font-size: ${rem(56)};
+  font-size: ${between("36px", "48px")};
   font-family: ${({ theme }) => theme.fontFamily.serif};
-  line-height: ${rem(72)};
   margin-bottom: ${rem(15)};
 `;
 

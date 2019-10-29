@@ -1,7 +1,5 @@
-import { Formik, Form } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
-import { Input } from "../Field";
-import Button from "../Button";
 import * as S from "./styled";
 
 const ConversionForm = () => (
@@ -34,33 +32,44 @@ const ConversionForm = () => (
           }, 400);
         }}
       >
-        <Form>
-          <Input
-            label="Nome"
-            name="name"
-            type="text"
-            hasIcon="smile"
-            placeholder="Nome"
-            hiddenLabel
+        <S.ConversionForm>
+          <S.ConversionGroup>
+            <S.ConversionInput
+              label="Nome"
+              name="name"
+              type="text"
+              hasIcon="smile"
+              placeholder="Nome"
+              hiddenLabel
+            />
+          </S.ConversionGroup>
+          <S.ConversionGroup>
+            <S.ConversionInput
+              label="E-mail"
+              name="email"
+              type="email"
+              hasIcon="letter"
+              placeholder="E-mail"
+              hiddenLabel
+            />
+          </S.ConversionGroup>
+          <S.ConversionGroup>
+            <S.ConversionInput
+              label="Telefone"
+              name="phone"
+              type="tel"
+              hasIcon="phone"
+              placeholder="Telefone"
+              hiddenLabel
+            />
+          </S.ConversionGroup>
+          <S.ConversionButton
+            type="submit"
+            label="Enviar"
+            appearance="primaryDark"
+            block
           />
-          <Input
-            label="E-mail"
-            name="email"
-            type="email"
-            hasIcon="letter"
-            placeholder="E-mail"
-            hiddenLabel
-          />
-          <Input
-            label="Telefone"
-            name="phone"
-            type="tel"
-            hasIcon="phone"
-            placeholder="Telefone"
-            hiddenLabel
-          />
-          <Button type="submit" label="Enviar" appearance="primaryDark" block />
-        </Form>
+        </S.ConversionForm>
       </Formik>
     </S.ConversionFormContent>
   </S.ConversionCard>

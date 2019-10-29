@@ -16,16 +16,16 @@ const SIZES = {
 };
 
 export const ButtonIcon = styled(Icon)`
-  height: ${rem("14px")};
-  width: ${rem("14px")};
+  height: ${rem(14)};
+  width: ${rem(14)};
 `;
 
 export const ButtonLeftIcon = styled(ButtonIcon)`
-  margin-right: ${rem("8px")};
+  margin-right: ${rem(8)};
 `;
 
 export const ButtonRightIcon = styled(ButtonIcon)`
-  margin-left: ${rem("8px")};
+  margin-left: ${rem(8)};
 `;
 
 export const ButtonText = styled.span`
@@ -36,7 +36,7 @@ export const Button = styled.button`
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-  border: ${rem("1px")} solid transparent;
+  border: ${rem(1)} solid transparent;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -66,38 +66,41 @@ export const Button = styled.button`
 
     if (size === SIZES.TINY) {
       return `
-        padding: ${rem("11px")} ${rem("12px")};
+        padding: ${rem(11)} ${rem(12)};
         border-radius: ${rem(theme.radius.tiny)};
-        font-size: ${rem("16px")};
+        font-size: ${rem(16)};
+        height: ${rem(40)};
 
         ${ButtonIcon} {
-          height: ${rem("14px")};
-          width: ${rem("14px")};
+          height: ${rem(14)};
+          width: ${rem(14)};
         }
       `;
     }
 
     if (size === SIZES.LARGER) {
       return `
-        padding: ${rem("14px")} ${rem("18px")};
+        padding: ${rem(14)} ${rem(18)};
         border-radius: ${rem(theme.radius.larger)};
-        font-size: ${rem("20px")};
+        font-size: ${rem(20)};
+        height: ${rem(50)};
 
         ${ButtonIcon} {
-          height: ${rem("18px")};
-          width: ${rem("18px")};
+          height: ${rem(18)};
+          width: ${rem(18)};
         }
       `;
     }
 
     return `
-      padding: ${rem("15px")} ${rem("20px")};
+      padding: ${rem(15)} ${rem(20)};
       border-radius: ${rem(theme.radius.medium)};
-      font-size: ${rem("16px")};
+      font-size: ${rem(16)};
+      height: ${rem(48)};
 
       ${ButtonIcon} {
-        height: ${rem("16px")};
-        width: ${rem("16px")};
+        height: ${rem(16)};
+        width: ${rem(16)};
       }
     `;
   }}
@@ -131,7 +134,7 @@ export const Button = styled.button`
         }
 
         &:focus {
-          box-shadow: 0 0 0 ${rem("3px")} ${rgba(theme.colors.primary, 0.3)};
+          box-shadow: 0 0 0 ${rem(3)} ${rgba(theme.colors.primary, 0.3)};
         }
       `;
     }
@@ -161,7 +164,7 @@ export const Button = styled.button`
         }
 
         &:focus {
-          box-shadow: 0 0 0 ${rem("3px")} ${rgba(theme.colors.primary, 0.3)};
+          box-shadow: 0 0 0 ${rem(3)} ${rgba(theme.colors.primary, 0.3)};
         }
       `;
     }
@@ -189,7 +192,7 @@ export const Button = styled.button`
         }
 
         &:focus {
-          box-shadow: 0 0 0 ${rem("3px")} ${rgba(theme.colors.primary, 0.3)};
+          box-shadow: 0 0 0 ${rem(3)} ${rgba(theme.colors.primary, 0.3)};
         }
       `;
     }
@@ -219,10 +222,7 @@ export const Button = styled.button`
         }
 
         &:focus {
-          box-shadow: 0 0 0 ${rem("3px")} ${rgba(
-        theme.colors.primaryDark,
-        0.3
-      )};
+          box-shadow: 0 0 0 ${rem(3)} ${rgba(theme.colors.primaryDark, 0.3)};
         }
       `;
     }
@@ -250,7 +250,7 @@ export const Button = styled.button`
         }
 
         &:focus {
-          box-shadow: 0 0 0 ${rem("3px")} ${rgba(theme.colors.light, 0.3)};
+          box-shadow: 0 0 0 ${rem(3)} ${rgba(theme.colors.light, 0.3)};
         }
       `;
     }
