@@ -1,7 +1,7 @@
 import { useField } from "formik";
-import Group from "./group";
-import Label from "./label";
-import Feedback from "./feedback";
+import Group from "./Group";
+import Label from "./Label";
+import Feedback from "./Feedback";
 import * as S from "./styled";
 
 const Input = ({ label, hasIcon, hiddenLabel, ...props }) => {

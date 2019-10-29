@@ -13,7 +13,7 @@ export const HeaderWrapper = styled.header`
   height: ${rem(80)};
   width: 100%;
   visibility: visible;
-  transition: all 300ms ease;
+  transition: all 400ms ease;
 
   ${params => {
     const { scrolled } = params;
@@ -21,7 +21,7 @@ export const HeaderWrapper = styled.header`
     if (scrolled) {
       return `
         visibility: hidden;
-        transition: all 300ms ease-out;
+        transition: all 200ms ease-out;
         transform: translate(0, -100%);
       `;
     }
