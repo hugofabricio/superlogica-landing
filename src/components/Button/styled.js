@@ -219,7 +219,10 @@ export const Button = styled.button`
         }
 
         &:focus {
-          box-shadow: 0 0 0 ${rem("3px")} ${rgba(theme.colors.light, 0.3)};
+          box-shadow: 0 0 0 ${rem("3px")} ${rgba(
+        theme.colors.primaryDark,
+        0.3
+      )};
         }
       `;
     }
