@@ -20,7 +20,8 @@ const Jumbotron = ({
             label={button.label}
             appearance="light"
             size="larger"
-            url={button.url}
+            href={button.url}
+            target="_blank"
           />
         )}
       </S.JumbotronHeader>

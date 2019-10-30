@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import { rem } from "polished";
+import media from "styled-media-query";
 
 export const PlansGroupWrapper = styled.div`
   width: 100%;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
-  flex-wrap: nowrap;
+
+  ${media.lessThan("862px")`
+    flex-direction: column;
+  `}
 `;

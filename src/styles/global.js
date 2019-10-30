@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,500&display=swap');
@@ -6,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
   @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 
   body {
-    font-family: ${({ theme }) => theme.fontFamily.sansSerif};
+    font-family: ${theme.fontFamily.sansSerif};
     font-size: 16px;
     height: 100%;
     width: 100%;

@@ -14,7 +14,7 @@ export const JumbotronWrapper = styled.section`
         `${startColor ? startColor : theme.colors.secondary} 0%`,
         `${endColor ? endColor : theme.colors.primaryLight} 100%`
       ],
-      toDirection: "-315deg"
+      toDirection: "315deg"
     });
   }}
 `;
@@ -26,10 +26,6 @@ export const JumbotronContainer = styled(Container)`
   align-items: center;
   position: relative;
   min-height: ${rem(460)};
-
-  ${media.greaterThan("962px")`
-
-  `}
 
   ${media.lessThan("962px")`
     flex-direction: column;

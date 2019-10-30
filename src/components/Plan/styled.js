@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import { rem, rgba } from "polished";
 import Card from "../Card";
 import Icon from "../Icon";
 import Button from "../Button";
 
 export const PlanCard = styled(Card)`
+  align-self: flex-start;
   padding: 0;
   position: relative;
   width: 30%;
@@ -41,6 +43,11 @@ export const PlanCard = styled(Card)`
   &:last-of-type {
     margin-right: 0;
   }
+
+  ${media.lessThan("862px")`
+    width: 100%;
+    margin-bottom: ${rem(60)};
+  `}
 `;
 
 export const PlanBadge = styled.span`
@@ -108,7 +115,8 @@ export const PlanDetails = styled.ul``;
 
 export const PlanFeature = styled.li`
   border-bottom: ${rem(1)} solid ${({ theme }) => rgba(theme.colors.grey, 0.4)};
-  padding: ${rem(10)};
+  padding: ${rem(10)} ${rem(30)};
+  font-size: ${rem(14)};
 
   &:first-of-type {
     border-top: ${rem(1)} solid ${({ theme }) => rgba(theme.colors.grey, 0.4)};

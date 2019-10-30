@@ -21,7 +21,6 @@ function NextArrow(props) {
 
 const Carousel = ({ children }) => {
   let settings = {
-    fade: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
