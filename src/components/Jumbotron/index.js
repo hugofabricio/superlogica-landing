@@ -11,7 +11,7 @@ const Jumbotron = ({
   endColor
 }) => (
   <S.JumbotronWrapper id="intro" startColor={startColor} endColor={endColor}>
-    <S.JumbotronContainer>
+    <S.JumbotronContainer withConversion={withConversion}>
       <S.JumbotronHeader>
         <S.JumbotronTitle>{title}</S.JumbotronTitle>
         {subtitle && <S.JumbotronText>{subtitle}</S.JumbotronText>}

@@ -25,7 +25,12 @@ export const JumbotronContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  min-height: ${rem(460)};
+
+  ${props =>
+    props.withConversion &&
+    `
+      min-height: ${rem(460)};
+    `}
 
   ${media.lessThan("962px")`
     flex-direction: column;
