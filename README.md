@@ -25,6 +25,7 @@ Nextjs requests an api and render the campaign page.
 
 ```
 {
+  "id": "5db8ce10ab1d93751bfdf3d5",
   "title": "Uma nova forma de fazer negócios.",
   "subtitle": "A Superlógica oferece um sistema completo para sua empresa escalar na era digital.",
   "colors": {

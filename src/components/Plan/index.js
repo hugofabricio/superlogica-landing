@@ -1,8 +1,16 @@
 import { string, number, object, bool, array } from "prop-types";
 import * as S from "./styled";
 
-const Plan = ({ name, price, features, button, isBestSeller, className }) => {
-  const { label, url } = button;
+const Plan = ({
+  id,
+  name,
+  price,
+  features,
+  button,
+  isBestSeller,
+  className
+}) => {
+  const { url, label } = button;
   return (
     <S.PlanCard className={className} isBestSeller={isBestSeller}>
       <S.PlanHeader>
@@ -26,6 +34,7 @@ const Plan = ({ name, price, features, button, isBestSeller, className }) => {
         <S.PlanButton
           label={label}
           href={url}
+          to={`/campanhas/${id}`}
           appearance={!isBestSeller ? "primaryDark" : "light"}
           {...button}
         />
@@ -35,8 +44,9 @@ const Plan = ({ name, price, features, button, isBestSeller, className }) => {
 };
 
 Plan.propTypes = {
+  id: string,
   name: string.isRequired,
-  price: number.isRequired,
+  price: number,
   features: array,
   button: object.isRequired,
   isBestSeller: bool

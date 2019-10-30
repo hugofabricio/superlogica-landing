@@ -10,7 +10,7 @@ import Plan from "../../components/Plan";
 import Carousel from "../../components/Carousel";
 import Slide from "../../components/Slide";
 
-const CampaignPage = props => {
+const Campaign = props => {
   const { campaign } = props;
 
   if (campaign.colors) {
@@ -83,7 +83,7 @@ const CampaignPage = props => {
   );
 };
 
-CampaignPage.getInitialProps = async function(context) {
+Campaign.getInitialProps = async function(context) {
   const { slug } = context.query;
   const res = await fetch(`https://api.jsonbin.io/b/${slug}/latest`);
   const campaign = await res.json();
@@ -91,4 +91,4 @@ CampaignPage.getInitialProps = async function(context) {
   return { campaign };
 };
 
-export default CampaignPage;
+export default Campaign;

@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import { isExternalUrl } from "../../util/url";
 import * as S from "./styled";
 
-const Button = ({ label, hasLeftIcon, hasRightIcon, isLink, ...props }) => {
+const Button = ({ label, hasLeftIcon, hasRightIcon, isLink, to, ...props }) => {
   const buttonContent = (
     <>
       {hasLeftIcon && <S.ButtonLeftIcon name={hasLeftIcon} />}
@@ -19,7 +19,7 @@ const Button = ({ label, hasLeftIcon, hasRightIcon, isLink, ...props }) => {
 
     if (!isExternalUrl(props.href)) {
       return (
-        <NextLink href={props.href} passHref>
+        <NextLink href={props.href} as={to} passHref>
           <SelectedButton {...props}>{buttonContent}</SelectedButton>
         </NextLink>
       );
