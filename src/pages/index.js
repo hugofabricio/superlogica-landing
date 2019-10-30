@@ -20,6 +20,10 @@ const IndexPage = props => {
             subtitle="Teste - Hugo Fabricio"
             startColor={theme.colors.primary}
             endColor={theme.colors.secondary}
+            button={{
+              label: "Exemplo de resposta API",
+              url: "https://api.jsonbin.io/b/5db8ce10ab1d93751bfdf3d5/latest"
+            }}
           />
           <Section title="Planos" paddingBottom={120}>
             <PlansGroup>
