@@ -48,6 +48,11 @@ const CampaignPage = props => {
                   price={plan.price}
                   features={plan.features}
                   isBestSeller={plan.isBestSeller}
+                  button={{
+                    label: "Comprar",
+                    url: "/",
+                    hasLeftIcon: "cart"
+                  }}
                 />
               ))}
             </PlansGroup>

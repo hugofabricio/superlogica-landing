@@ -1,10 +1,10 @@
 import React from "react";
-import Link from "next/link";
+import NextLink from "next/link";
 
 import * as S from "./styled";
 
 const Brand = () => (
-  <Link href="/" passHref>
+  <NextLink href="/" passHref>
     <S.BrandLink title="Superlógica">
       <S.BrandLogo>Superlógica</S.BrandLogo>
       <svg
@@ -20,7 +20,7 @@ const Brand = () => (
         />
       </svg>
     </S.BrandLink>
-  </Link>
+  </NextLink>
 );
 
 export default Brand;

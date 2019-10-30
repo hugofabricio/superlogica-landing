@@ -29,6 +29,7 @@ export const JumbotronContainer = styled(Container)`
 
   ${media.lessThan("962px")`
     flex-direction: column;
+    min-height: auto;
   `}
 `;
 
