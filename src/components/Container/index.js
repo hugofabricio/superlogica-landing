@@ -1,3 +1,4 @@
+import { bool, node } from "prop-types";
 import * as S from "./styled";
 
 const Container = ({ className, isFluid, children }) => (
@@ -5,5 +6,10 @@ const Container = ({ className, isFluid, children }) => (
     {children}
   </S.ContainerWrapper>
 );
+
+Container.propTypes = {
+  isFluid: bool,
+  children: node.isRequired
+};
 
 export default Container;

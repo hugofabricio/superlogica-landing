@@ -1,3 +1,4 @@
+import { node } from "prop-types";
 import SlickCarousel from "react-slick";
 import * as S from "./styled";
 
@@ -28,6 +29,10 @@ const Carousel = ({ children }) => {
     prevArrow: <PrevArrow />
   };
   return <SlickCarousel {...settings}>{children}</SlickCarousel>;
+};
+
+Carousel.propTypes = {
+  children: node.isRequired
 };
 
 export default Carousel;

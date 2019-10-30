@@ -1,5 +1,5 @@
+import { string, number, object, bool, array } from "prop-types";
 import * as S from "./styled";
-import { buttons } from "polished";
 
 const Plan = ({ name, price, features, button, isBestSeller, className }) => {
   const { label, url } = button;
@@ -32,6 +32,14 @@ const Plan = ({ name, price, features, button, isBestSeller, className }) => {
       </S.PlanFooter>
     </S.PlanCard>
   );
+};
+
+Plan.propTypes = {
+  name: string.isRequired,
+  price: number.isRequired,
+  features: array,
+  button: object.isRequired,
+  isBestSeller: bool
 };
 
 export default Plan;

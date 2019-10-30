@@ -1,3 +1,4 @@
+import { string, bool } from "prop-types";
 import * as S from "./styled";
 
 const Label = ({ label, hidden, ...props }) => {
@@ -6,6 +7,11 @@ const Label = ({ label, hidden, ...props }) => {
       {label}
     </S.Label>
   );
+};
+
+Label.propTypes = {
+  label: string.isRequired,
+  hidden: bool
 };
 
 export default Label;

@@ -1,3 +1,4 @@
+import { string, bool } from "prop-types";
 import { useField } from "formik";
 import Label from "./Label";
 import Feedback from "./Feedback";
@@ -16,6 +17,12 @@ const Input = ({ label, hasIcon, hiddenLabel, ...props }) => {
       <Feedback meta={meta} />
     </>
   );
+};
+
+Input.propTypes = {
+  label: string.isRequired,
+  hasIcon: string,
+  hiddenLabel: bool
 };
 
 export default Input;

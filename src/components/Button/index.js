@@ -1,3 +1,4 @@
+import { bool, string } from "prop-types";
 import NextLink from "next/link";
 import { isExternalUrl } from "../../util/url";
 import * as S from "./styled";
@@ -26,6 +27,13 @@ const Button = ({ label, hasLeftIcon, hasRightIcon, isLink, ...props }) => {
   }
 
   return <SelectedButton {...props}>{buttonContent}</SelectedButton>;
+};
+
+Button.propTypes = {
+  label: string.isRequired,
+  hasLeftIcon: string,
+  hasRightIcon: string,
+  isLink: bool
 };
 
 export default Button;

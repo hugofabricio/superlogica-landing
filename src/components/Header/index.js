@@ -1,46 +1,25 @@
 import { useState, useEffect } from "react";
+import { bool } from "prop-types";
 import * as S from "./styled";
 import Brand from "../Brand";
 import Nav from "../Nav";
 import { links, linksLogin } from "./content";
-
-const useHandleScroll = () => {
-  const [scroll, setScroll] = useState(true);
-
-  useEffect(() => {
-    const scrollCheck = window.scrollY >= 50;
-
-    if (scrollCheck !== scroll) {
-      setScroll(scrollCheck);
-    }
-
-    const onScroll = () => {
-      const scrollCheck = window.scrollY >= 50;
-
-      if (scrollCheck !== scroll) {
-        setScroll(scrollCheck);
-      }
-    };
-
-    document.addEventListener("scroll", onScroll);
-
-    return () => {
-      document.removeEventListener("scroll", onScroll);
-    };
-  }, [scroll, setScroll]);
-
-  return scroll;
-};
+import NavToggle from "../NavToggle";
 
 const Header = () => {
-  const scroll = useHandleScroll();
+  const [open, setOpen] = useState(false);
 
   return (
-    <S.HeaderWrapper scrolled={scroll}>
+    <S.HeaderWrapper>
       <S.HeaderContainer>
-        <Brand />
-        <Nav links={links} />
-        <Nav links={linksLogin} />
+        <S.HeaderBrand>
+          <Brand />
+        </S.HeaderBrand>
+        <S.HeaderMenu open={open}>
+          <Nav links={links} />
+          <Nav links={linksLogin} />
+        </S.HeaderMenu>
+        <NavToggle open={open} setOpen={setOpen} />
       </S.HeaderContainer>
     </S.HeaderWrapper>
   );

@@ -1,3 +1,4 @@
+import { string, object, bool } from "prop-types";
 import * as S from "./styled";
 import Button from "../Button";
 import ConversionForm from "../ConversionForm";
@@ -29,5 +30,14 @@ const Jumbotron = ({
     </S.JumbotronContainer>
   </S.JumbotronWrapper>
 );
+
+Jumbotron.propTypes = {
+  title: string.isRequired,
+  subtitle: string,
+  button: object,
+  withConversion: bool,
+  startColor: string.isRequired,
+  endColor: string.isRequired
+};
 
 export default Jumbotron;

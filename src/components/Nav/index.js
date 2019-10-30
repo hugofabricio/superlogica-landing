@@ -1,3 +1,4 @@
+import { array } from "prop-types";
 import NextLink from "next/link";
 import { isExternalUrl } from "../../util/url";
 import Button from "../Button";
@@ -44,5 +45,9 @@ const Nav = ({ links }) => (
     })}
   </S.NavList>
 );
+
+Nav.propTypes = {
+  links: array.isRequired
+};
 
 export default Nav;
