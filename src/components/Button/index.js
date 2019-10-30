@@ -33,7 +33,9 @@ Button.propTypes = {
   label: string.isRequired,
   hasLeftIcon: string,
   hasRightIcon: string,
-  isLink: bool
+  isLink: bool,
+  size: string,
+  appearance: string
 };
 
 export default Button;
