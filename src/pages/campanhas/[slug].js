@@ -41,16 +41,17 @@ const Campaign = props => {
           />
           <Section title="Planos" paddingBottom={120}>
             <PlansGroup>
-              {campaign.plans.map((plan, id) => (
+              {campaign.plans.map(plan => (
                 <Plan
-                  key={id}
+                  key={plan.id}
+                  id={plan.id}
                   name={plan.name}
                   price={plan.price}
                   features={plan.features}
                   isBestSeller={plan.isBestSeller}
                   button={{
                     label: "Comprar",
-                    url: "/",
+                    url: "/campanhas/[slug]",
                     hasLeftIcon: "cart"
                   }}
                 />
